@@ -1,12 +1,11 @@
-import { createEffect } from "solid-js"
-import paused from "../models/paused"
-import time from "../models/time"
+import { createEffect } from 'solid-js'
+import { state, paused, time } from '../models/state'
 
 export const Shortcuts = () => {
   createEffect(() => {
     document.onkeydown = (e) => {
       if (e.code === 'Space') paused.toggle()
-      if (e.code === 'Backspace' && paused.get()) time.reset()
+      if (e.code === 'Backspace' && state.paused) time.reset()
     }
   })
   return null

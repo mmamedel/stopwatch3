@@ -1,10 +1,9 @@
-import { createEffect, onCleanup } from "solid-js"
-import paused from "../models/paused"
-import time from "../models/time"
+import { createEffect, onCleanup } from 'solid-js'
+import { state, time } from '../models/state'
 
 export const Clock = () => {
-  createEffect(() =>  {
-    const interval = !paused.get() ? setInterval(time.inc, 10) : undefined
+  createEffect(() => {
+    const interval = !state.paused ? setInterval(time.inc, 10) : undefined
     onCleanup(() => interval && clearInterval(interval))
   })
   return null
