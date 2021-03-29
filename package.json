@@ -20,7 +20,7 @@
     "build": "solid-scripts build",
     "test": "solid-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "node scripts/deploy.js"
   },
   "browserslist": [
     "Chrome 74",
