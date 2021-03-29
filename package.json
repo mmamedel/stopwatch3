@@ -1,5 +1,5 @@
 {
-  "name": "solid-test",
+  "name": "stopwatch3",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -9,7 +9,9 @@
     "solid-scripts": "0.0.54",
     "typescript": "4.2.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "solid-styled-components": "^0.24.16"
+  },
   "scripts": {
     "start": "solid-scripts start",
     "build": "solid-scripts build",
